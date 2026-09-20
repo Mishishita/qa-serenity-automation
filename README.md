@@ -90,7 +90,7 @@ git --version
 1. Clonar el repositorio:
 
 ```bash
-git clone <URL_DEL_REPOSITORIO>
+git clone https://github.com/Mishishita/qa-serenity-automation.git
 ```
 
 2. Ingresar al directorio del proyecto:
