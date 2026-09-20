@@ -160,3 +160,9 @@ Resultado:
 - 0 fallos
 - 0 errores
 - Reporte Serenity BDD generado correctamente
+
+## Reporte de ejecución
+
+El reporte de ejecución generado por Serenity BDD se encuentra disponible en:
+
+[Ver reporte Serenity BDD](https://mishishita.github.io/qa-serenity-automation/)
