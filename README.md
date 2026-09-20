@@ -57,7 +57,7 @@ src/test
         └── ui
 ```
 
-### Componentes principales
+## Componentes principales
 
 - **Actors:** representan a los usuarios que ejecutan las acciones.
 - **Tasks:** representan las acciones que realiza el actor.
@@ -122,13 +122,17 @@ Al finalizar la ejecución, Maven muestra el resultado de las pruebas y Serenity
 
 ## Reporte Serenity BDD
 
-Después de ejecutar las pruebas, el reporte HTML de Serenity BDD se genera en:
+Después de ejecutar las pruebas, Serenity BDD genera el reporte HTML en:
 
 ```text
 target/site/serenity/index.html
 ```
 
-El reporte incluye el resumen de ejecución, resultados de los escenarios y detalles de las pruebas automatizadas.
+El reporte incluye el resumen de ejecución, resultados de los escenarios y detalles de las pruebas.
+
+El reporte de ejecución también se encuentra publicado en GitHub Pages:
+
+[Ver reporte Serenity BDD](https://mishishita.github.io/qa-serenity-automation/)
 
 ## Decisiones técnicas
 
@@ -144,25 +148,3 @@ El reporte incluye el resumen de ejecución, resultados de los escenarios y deta
 Durante las pruebas se observó que el endpoint de actualización `PUT /api/users/{id}` devuelve una respuesta `200 OK` incluso cuando el valor utilizado como `{id}` no corresponde a un usuario existente.
 
 Por este motivo, la prueba de actualización valida el contenido de la respuesta (`name`, `job` y `updatedAt`) y el código de estado esperado, sin asumir un `404 Not Found` para identificadores inexistentes.
-
-## Resultado de la ejecución
-
-La ejecución completa del proyecto fue validada mediante:
-
-```bash
-mvn clean verify
-```
-
-Resultado:
-
-- 6 pruebas ejecutadas
-- 6 pruebas exitosas
-- 0 fallos
-- 0 errores
-- Reporte Serenity BDD generado correctamente
-
-## Reporte de ejecución
-
-El reporte de ejecución generado por Serenity BDD se encuentra disponible en:
-
-[Ver reporte Serenity BDD](https://mishishita.github.io/qa-serenity-automation/)
